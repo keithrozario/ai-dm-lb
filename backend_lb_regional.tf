@@ -79,6 +79,7 @@ resource "google_compute_region_target_http_proxy" "regional_lb" {
   name    = "regional-xlb-proxy"
   region  = data.google_client_config.this.region
   url_map = google_compute_region_url_map.regional_lb.id
+  
 }
 
 resource "google_compute_forwarding_rule" "regional_lb" {
